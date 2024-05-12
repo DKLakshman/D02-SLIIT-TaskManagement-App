@@ -22,7 +22,7 @@ class AddList : AppCompatActivity() {
         binding.saveButton.setOnClickListener{
             val title = binding.titleEditText.text.toString()
             val content = binding.contentEditText.text.toString()
-            val list = List(0,title,content)
+            val list = Note(0,title,content)
             db.insertNote(list)
             finish()
             Toast.makeText(this,"List Saved",Toast.LENGTH_SHORT).show()
